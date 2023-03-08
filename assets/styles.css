@@ -1,0 +1,126 @@
+/* go to UIGradient for gradient colours */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
+body {
+	background: linear-gradient(to top left, #570254, #0c0927, #050544);
+	/* background-color: rgba(21, 1, 28, 0.963); */
+	height: 100vh;
+	background-size: 250% 250%;
+	animation: gradient 20s ease infinite;
+	backdrop-filter: blur(20px);
+	overflow: hidden;
+}
+
+/* keyframes for gradient animation */
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+h1 {
+	font-family: "Merriweather", serif;
+	/* background-color: green; */
+	color: white;
+	font-size: 40px;
+	/* background-color: red; */
+	margin: auto;
+}
+
+#main_text {
+	/* background-color: green; */
+	text-align: left;
+
+	position: absolute;
+}
+
+#change {
+	color: orange;
+	text-align: left;
+	/* margin-left: 50vw; */
+	/* position: absolute; */
+	/* background-color: red; */
+	margin-right: auto;
+	/* position: absolute; */
+}
+
+.welcome_message {
+	display: inline-block;
+	margin: auto;
+	width: 100%;
+	margin-top: 35vh;
+	display: flex;
+	justify-content: center;
+}
+
+.radio_menu {
+	display: flex;
+	min-width: 300px;
+	max-width: 300px;
+	/* flex-flow: row wrap; */
+	justify-content: space-around;
+	padding-top: 10vh;
+	/* margin-left: 42%;
+	margin-right: 54%; */
+	margin: auto;
+	/* background-color: green; */
+}
+
+input[type="radio"] {
+	appearance: none;
+	background-color: #fff;
+	margin: 0;
+	font: inherit;
+	color: currentColor;
+	width: 3em;
+	height: 3em;
+	border: 0.16em solid currentColor;
+	border-radius: 50%;
+	display: grid;
+	place-content: center;
+}
+
+input[type="radio"]::before {
+	content: "";
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	transform: scale(0);
+	transition: 120ms transform ease-in-out;
+	box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+input[type="radio"]:checked::before {
+	transform: scale(2.5);
+	background-color: red;
+	border: 0.16em solid green;
+
+	/* z-index: -1; */
+}
+
+.radio_button {
+	/* padding: 10px; */
+	margin-left: 2px;
+	flex-shrink: 0;
+	display: inline-block;
+}
+
+/* #Gradient1 {
+	background-color: red;
+}
+
+#Gradient2 {
+	background-color: yellow;
+}
+#Gradient3 {
+	background-color: green;
+}
+
+#Gradient4 {
+	background-color: blue;
+} */

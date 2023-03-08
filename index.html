@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/assets/styles.css" />
+		<title>Welcome to Gradient Homepage</title>
+	</head>
+	<body>
+		<div class="welcome_message">
+			<h1 id="main_text">
+				Welcome back, <br />
+				<span id="change">User</span>.
+			</h1>
+		</div>
+
+		<div>
+			<h1><span id="radio_check">Gradient 1</span></h1>
+		</div>
+
+		<div class="radio_menu">
+			<div>
+				<input
+					type="radio"
+					id="Gradient1"
+					name="menu"
+					value="Gradient1"
+					class="radio_button"
+					onchange="get_value(this)"
+				/>
+				<label for="Gradient1" style="color: white"></label>
+			</div>
+
+			<div>
+				<input
+					type="radio"
+					id="Gradient2"
+					name="menu"
+					value="Gradient2"
+					class="radio_button"
+					onchange="get_value(this)"
+				/>
+				<label for="Gradient2" style="color: white"></label>
+			</div>
+
+			<div>
+				<input
+					type="radio"
+					id="Gradient3"
+					name="menu"
+					value="Gradient3"
+					class="radio_button"
+					onchange="get_value(this)"
+				/>
+				<label for="Gradient3" style="color: white"></label>
+			</div>
+
+			<div>
+				<input
+					type="radio"
+					id="Gradient4"
+					name="menu"
+					value="Gradient4"
+					class="radio_button"
+					onchange="get_value(this)"
+				/>
+				<label for="Gradient4" style="color: white"></label>
+			</div>
+		</div>
+
+		<script src="index.js"></script>
+	</body>
+</html>
