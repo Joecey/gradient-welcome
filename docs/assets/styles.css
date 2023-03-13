@@ -14,11 +14,19 @@ body {
 	overflow: hidden;
 }
 
+.gradient-patch-1 {
+	background: linear-gradient(to top left, #570254, #0c0927, #050544);
+}
+
 .gradient-colour-2 {
 	background: linear-gradient(to top left, #005c97, #363795, #050544);
 	background-size: 250% 250%;
 	animation: gradient 20s ease infinite;
 	overflow: hidden;
+}
+
+.gradient-patch-2 {
+	background: linear-gradient(to top left, #005c97, #363795, #050544);
 }
 
 .gradient-colour-3 {
@@ -28,11 +36,19 @@ body {
 	overflow: hidden;
 }
 
+.gradient-patch-3 {
+	background: linear-gradient(to top left, #6a9113, #141517, #050544);
+}
+
 .gradient-colour-4 {
 	background: linear-gradient(to top left, #6441a5, #2a0845, #834100);
 	background-size: 250% 250%;
 	animation: gradient 20s ease infinite;
 	overflow: hidden;
+}
+
+.gradient-patch-4 {
+	background: linear-gradient(to top left, #6441a5, #2a0845, #834100);
 }
 
 /* keyframes for gradient animation */
@@ -120,13 +136,14 @@ input[type="radio"]::before {
 	height: 1em;
 	border-radius: 50%;
 	transform: scale(0);
+	color: black;
 	transition: 120ms transform ease-in-out;
 	box-shadow: inset 1em 1em var(--form-control-color);
 }
 
 input[type="radio"]:checked::before {
 	transform: scale(1);
-
+	/* color: black; */
 	/* z-index: -1; */
 }
 
