@@ -107,7 +107,7 @@ input[type="radio"] {
 	transition: background-color 1s ease;
 	width: 3em;
 	height: 3em;
-	border: 0.16em solid currentColor;
+	border: 0.05em solid currentColor;
 	border-radius: 50%;
 	display: grid;
 	place-content: center;
@@ -126,8 +126,6 @@ input[type="radio"]::before {
 
 input[type="radio"]:checked::before {
 	transform: scale(1);
-	background-color: red;
-	border: 0.16em solid green;
 
 	/* z-index: -1; */
 }
@@ -135,8 +133,8 @@ input[type="radio"]:checked::before {
 /* if actual radio body is in checked state, do the bottom */
 
 input[type="radio"]:checked {
-	background-color: rgb(183, 255, 0);
-	transition: background-color 1s ease;
+	box-shadow: 0 0 40px 1px rgb(133, 228, 255);
+	transition: box-shadow 0.5s ease;
 
 	/* z-index: -1; */
 }
