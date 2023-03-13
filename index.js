@@ -14,10 +14,18 @@ setInterval(function () {
 	index = (index + 1) % names.length;
 }, 2000);
 
-// listen for radio button
-function get_value(radio){
-	// change gradient type
-	document.getElementById("radio_check").innerHTML = radio.value;
-}
+// set initial value to Gradient1
+selected_gradient = "Gradient1";
 
-console.log(selected_gradient);
+const body_element = document.getElementById("gradient-background");
+console.log(body_element.className);
+
+// listen for radio button
+// onclick of a radio button, run this function
+function get_value(radio) {
+	// change gradient type
+	// use onchange for each radio to get the value in class
+	selected_gradient = radio.value;
+	console.log(selected_gradient);
+	body_element.classList.replace(body_element.className, selected_gradient);
+}

@@ -1,12 +1,37 @@
 /* go to UIGradient for gradient colours */
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
 body {
-	background: linear-gradient(to top left, #570254, #0c0927, #050544);
+	background: white;
+	backdrop-filter: blur(20px);
 	/* background-color: rgba(21, 1, 28, 0.963); */
 	height: 100vh;
+}
+
+.gradient-colour-1 {
+	background: linear-gradient(to top left, #570254, #0c0927, #050544);
 	background-size: 250% 250%;
 	animation: gradient 20s ease infinite;
-	backdrop-filter: blur(20px);
+	overflow: hidden;
+}
+
+.gradient-colour-2 {
+	background: linear-gradient(to top left, #005c97, #363795, #050544);
+	background-size: 250% 250%;
+	animation: gradient 20s ease infinite;
+	overflow: hidden;
+}
+
+.gradient-colour-3 {
+	background: linear-gradient(to top left, #6a9113, #141517, #050544);
+	background-size: 250% 250%;
+	animation: gradient 20s ease infinite;
+	overflow: hidden;
+}
+
+.gradient-colour-4 {
+	background: linear-gradient(to top left, #6441a5, #2a0845, #834100);
+	background-size: 250% 250%;
+	animation: gradient 20s ease infinite;
 	overflow: hidden;
 }
 
@@ -54,6 +79,7 @@ h1 {
 	margin: auto;
 	width: 100%;
 	margin-top: 35vh;
+	padding-bottom: 10vh;
 	display: flex;
 	justify-content: center;
 }
@@ -64,7 +90,8 @@ h1 {
 	max-width: 300px;
 	/* flex-flow: row wrap; */
 	justify-content: space-around;
-	padding-top: 10vh;
+	padding-top: 15vh;
+	/* margin-top: 60%; */
 	/* margin-left: 42%;
 	margin-right: 54%; */
 	margin: auto;
@@ -121,17 +148,19 @@ input[type="radio"]:checked {
 	display: inline-block;
 }
 
-/* #Gradient1 {
-	background-color: red;
+.fade-in-short {
+	animation: fadeIn 1s;
 }
 
-#Gradient2 {
-	background-color: yellow;
-}
-#Gradient3 {
-	background-color: green;
+.fade-in {
+	animation: fadeIn 5s;
 }
 
-#Gradient4 {
-	background-color: blue;
-} */
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
