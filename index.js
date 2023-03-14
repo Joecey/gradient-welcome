@@ -29,3 +29,16 @@ function get_value(radio) {
 	console.log(selected_gradient);
 	body_element.classList.replace(body_element.className, selected_gradient);
 }
+
+// let shape follow mouse
+let shape_follow = document.getElementById("shape-follow");
+
+// if mouse moves, then get left and top position
+y_offset = 320;
+const onMouseMove = (e) => {
+	shape_follow.style.left = e.pageX + "px";
+	shape_follow.style.top = e.pageY - y_offset + "px";
+	// console.log(typeofe.pageX, e.pageY);
+};
+
+document.addEventListener("mousemove", onMouseMove);

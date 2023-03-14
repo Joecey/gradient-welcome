@@ -111,7 +111,7 @@ h1 {
 	/* margin-left: 42%;
 	margin-right: 54%; */
 	margin: auto;
-	/* z-index: 2; */
+	z-index: 2;
 	/* background-color: green; */
 }
 
@@ -199,4 +199,18 @@ input[type="radio"]:checked {
 	left: 0px;
 	top: -300px;
 	z-index: 1;
+}
+
+#shape-follow {
+	position: absolute;
+	background-color: white;
+	/* transform: translate(100%, 100%); */
+	transform: translate(-50%, -50%);
+	height: 100px;
+	width: 70px;
+	border-radius: 50%;
+	/* border: 2px solid black; */
+	z-index: 0;
+	filter: blur(50px);
+	/* margin: -50px 0 0 -50px; */
 }
