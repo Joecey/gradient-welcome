@@ -111,6 +111,7 @@ h1 {
 	/* margin-left: 42%;
 	margin-right: 54%; */
 	margin: auto;
+	/* z-index: 2; */
 	/* background-color: green; */
 }
 
@@ -143,8 +144,8 @@ input[type="radio"]::before {
 
 input[type="radio"]:checked::before {
 	transform: scale(1);
-	/* color: black; */
-	/* z-index: -1; */
+	/* color: black;
+	z-index: -1; */
 }
 
 /* if actual radio body is in checked state, do the bottom */
@@ -161,6 +162,8 @@ input[type="radio"]:checked {
 	margin-left: 2px;
 	flex-shrink: 0;
 	display: inline-block;
+	z-index: 2;
+	position: relative;
 }
 
 .fade-in-short {
@@ -178,4 +181,22 @@ input[type="radio"]:checked {
 	100% {
 		opacity: 1;
 	}
+}
+
+#background-pattern {
+	height: 200vh;
+	width: 200vw;
+
+	background-image: radial-gradient(
+		rgba(2255, 255, 255, 0.1) 9%,
+		transparent 9%
+	);
+
+	background-position: 0% 0%;
+	background-size: 10vmin 10vmin;
+
+	position: absolute;
+	left: 0px;
+	top: -300px;
+	z-index: 1;
 }
