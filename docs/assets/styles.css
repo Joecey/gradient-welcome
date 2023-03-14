@@ -205,12 +205,20 @@ input[type="radio"]:checked {
 	position: absolute;
 	background-color: white;
 	/* transform: translate(100%, 100%); */
-	transform: translate(-50%, -50%);
+	/* transform: translate(0%, 0%); */
 	height: 100px;
 	width: 70px;
 	border-radius: 50%;
 	/* border: 2px solid black; */
-	z-index: 0;
+	z-index: 10000;
 	filter: blur(50px);
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.5.s ease;
 	/* margin: -50px 0 0 -50px; */
+}
+
+/* when you hover over body > apply to shape follow */
+body:hover > #shape-follow {
+	opacity: 1;
 }

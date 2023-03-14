@@ -34,10 +34,13 @@ function get_value(radio) {
 let shape_follow = document.getElementById("shape-follow");
 
 // if mouse moves, then get left and top position
-y_offset = 320;
-const onMouseMove = (e) => {
-	shape_follow.style.left = e.pageX + "px";
-	shape_follow.style.top = e.pageY - y_offset + "px";
+const x_offset = 50;
+const y_offset = 360;
+window.onMouseMove = (e) => {
+	// const x = e.clientX = shape_follow.offsetWidth / 2,
+	// y = e.clientY = shape_follow.offsetHeight / 2;
+	shape_follow.style.left = e.clientX - 20 + "px";
+	shape_follow.style.top = e.clientY - y_offset + "px";
 	// console.log(typeofe.pageX, e.pageY);
 };
 
