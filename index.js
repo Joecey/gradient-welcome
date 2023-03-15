@@ -31,17 +31,27 @@ function get_value(radio) {
 }
 
 // let shape follow mouse
-let shape_follow = document.getElementById("shape-follow");
+const shape_follow = document.getElementById("shape-follow");
 
 // if mouse moves, then get left and top position
 const x_offset = 50;
-const y_offset = 360;
-window.onMouseMove = (e) => {
-	// const x = e.clientX = shape_follow.offsetWidth / 2,
-	// y = e.clientY = shape_follow.offsetHeight / 2;
-	shape_follow.style.left = e.clientX - 20 + "px";
-	shape_follow.style.top = e.clientY - y_offset + "px";
-	// console.log(typeofe.pageX, e.pageY);
-};
+const y_offset = 340;
+window.onmousemove = (e) => {
+	const x = e.pageX - window.innerWidth / 40,
+		y = e.pageY - window.innerHeight / 2.7;
+	// shape_follow.style.left = e.clientX - 20 + "px";
+	// shape_follow.style.top = e.clientY - y_offset + "px";
+	console.log(x, y);
 
-document.addEventListener("mousemove", onMouseMove);
+	// create keyframe class
+	const keyframes = {
+		transform: `translate(${x}px, ${y}px)`,
+	};
+
+	// animate to new position after 800ms, and retain state after animation done
+	shape_follow.animate(keyframes, {
+		duration: 800,
+		fill: `forwards`,
+	});
+};
+// document.addEventListener("mousemove", onMouseMove);

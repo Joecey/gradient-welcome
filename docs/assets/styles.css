@@ -202,19 +202,21 @@ input[type="radio"]:checked {
 }
 
 #shape-follow {
-	position: absolute;
-	background-color: white;
-	/* transform: translate(100%, 100%); */
-	/* transform: translate(0%, 0%); */
-	height: 100px;
-	width: 70px;
+	height: 50px;
+	width: 50px;
+	background-color: cyan;
 	border-radius: 50%;
-	/* border: 2px solid black; */
+
+	filter: blur(40px);
+	position: absolute;
+	left: 0px;
+	top: 0px;
 	z-index: 10000;
-	filter: blur(50px);
+
 	pointer-events: none;
 	opacity: 0;
-	transition: opacity 0.5.s ease;
+	transition: opacity 0.5s ease;
+
 	/* margin: -50px 0 0 -50px; */
 }
 
