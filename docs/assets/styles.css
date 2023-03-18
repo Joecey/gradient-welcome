@@ -19,14 +19,14 @@ body {
 }
 
 .gradient-colour-2 {
-	background: linear-gradient(to top left, #005c97, #363795, #050544);
+	background: linear-gradient(to top left, #002d49, #150534, #050544);
 	background-size: 250% 250%;
 	animation: gradient 20s ease infinite;
 	overflow: hidden;
 }
 
 .gradient-patch-2 {
-	background: linear-gradient(to top left, #005c97, #363795, #050544);
+	background: linear-gradient(to top left, #002d49, #150534, #050544);
 }
 
 .gradient-colour-3 {
@@ -216,6 +216,7 @@ input[type="radio"]:checked {
 	pointer-events: none;
 	opacity: 0;
 	transition: opacity 0.5s ease;
+	transition: 300ms linear;
 
 	/* margin: -50px 0 0 -50px; */
 }

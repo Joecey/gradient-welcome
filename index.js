@@ -33,6 +33,26 @@ function get_value(radio) {
 // let shape follow mouse
 const shape_follow = document.getElementById("shape-follow");
 
+// increase the size of the blob follow on click, return to normal size on release
+document.addEventListener("mousedown", function () {
+	// console.log("mouseclick");
+
+	shape_follow.style.backgroundColor = "white";
+	const size_big = "70px";
+	shape_follow.style.height = size_big;
+	shape_follow.style.width = size_big;
+});
+
+// mouseup > return blob to initial size
+document.addEventListener("mouseup", function () {
+	// console.log("mouseup");
+
+	shape_follow.style.backgroundColor = "cyan";
+	const size_def = "50px";
+	shape_follow.style.height = size_def;
+	shape_follow.style.width = size_def;
+});
+
 // if mouse moves, then get left and top position
 const x_offset = 50;
 const y_offset = 340;
@@ -41,7 +61,7 @@ window.onmousemove = (e) => {
 		y = e.pageY - window.innerHeight / 2.7;
 	// shape_follow.style.left = e.clientX - 20 + "px";
 	// shape_follow.style.top = e.clientY - y_offset + "px";
-	console.log(x, y);
+	// console.log(x, y);
 
 	// create keyframe class
 	const keyframes = {
