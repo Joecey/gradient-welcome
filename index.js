@@ -4,15 +4,25 @@ console.log("hello world");
 // let display_name = 'Developer'
 
 names = ["Developer", "User", "Joe"];
-index = 0;
+index = -1;
 
 // change name in orange after a 2 second delay and constantly loop
+// add container pre-animation then remove to create transition
+const text_change = document.getElementById("change");
+
 setInterval(function () {
-	document.getElementById("change").innerHTML = names[index];
+	// add pre animation on top of container
+	text_change.classList.add("pre-animation");
+
+	// change text and remove animation after 1 second
+	setTimeout(function () {
+		text_change.innerHTML = names[index];
+		text_change.classList.remove("pre-animation");
+	}, 300);
 
 	// get mod of index / length
 	index = (index + 1) % names.length;
-}, 2000);
+}, 5000);
 
 // set initial value to Gradient1
 selected_gradient = "Gradient1";
@@ -75,3 +85,33 @@ window.onmousemove = (e) => {
 	});
 };
 // document.addEventListener("mousemove", onMouseMove);
+
+// move background image based on an Active Index datapoint
+// first create a variable for menu options
+const menu = document.getElementById("radio_options");
+const circle_pattern = document.getElementById("background-pattern");
+// create array for each available radio button
+Array.from(document.getElementsByClassName("radio_button"))
+
+	// iterate over each and update menu active index for corresponding mouseover
+	.forEach((item, index) => {
+		item.onmouseover = () => {
+			menu.dataset.activeIndex = index;
+
+			// use switch to change property of circle pattern
+			switch (index) {
+				case 0:
+					circle_pattern.style.backgroundPosition = "25% 0%";
+					break;
+				case 1:
+					circle_pattern.style.backgroundPosition = "50% 0%";
+					break;
+				case 2:
+					circle_pattern.style.backgroundPosition = "75% 0%";
+					break;
+				case 3:
+					circle_pattern.style.backgroundPosition = "100% 0%";
+					break;
+			}
+		};
+	});

@@ -9,11 +9,11 @@
 	</head>
 	<body id="gradient-background" class="gradient-colour-1">
 		<!-- blob follow -->
-		<div id="shape-follow"></div>
+		<!-- <div id="shape-follow"></div> -->
 		<div class="welcome_message fade-in-short">
 			<h1 id="main_text">
 				Welcome back, <br />
-				<span id="change">User</span>.
+				<span id="change" class="text_container">Joe</span>
 			</h1>
 		</div>
 
@@ -22,8 +22,10 @@
 		</div> -->
 
 		<!-- shape mouose follow -->
+		<!-- add cool circle pattern -->
+		<div id="shape-follow"></div>
 
-		<div class="radio_menu fade-in">
+		<div id="radio_options" class="radio_menu fade-in">
 			<div>
 				<input
 					type="radio"
@@ -71,11 +73,9 @@
 				/>
 				<label for="Gradient4" style="color: white"></label>
 			</div>
-
-			<!-- add cool circle pattern -->
-			<div id="background-pattern"></div>
 		</div>
-
+		<!-- needed to put this outside of radio menu div  -->
+		<div id="background-pattern"></div>
 		<script src="index.js"></script>
 	</body>
 </html>
